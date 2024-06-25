@@ -71,7 +71,7 @@ player_id = ${playerId};`
   response.send(convertPlayerDbObjectToResponseObject(player))
 })
 
-app.put('players/:playerId/', async (request, response) => {
+app.put('/players/:playerId/', async (request, response) => {
   const {playerId} = request.params
   const {playerName} = request.body
   const updatePlayerQuery = `
